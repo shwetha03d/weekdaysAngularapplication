@@ -1,0 +1,31 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div *ngIf="false">
+<div style="text-align:center" >
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+ <div>
+	<label>WeekDays:</label>
+	<input id="days" #day />
+	
+	<button type="button" (click)="onAdd(day.value); day.value=''" [disabled]="enabledButton">Add Day</button>
+	
+	<button type="button" (click)="onRemoveAll()">Remove All</button>
+	
+ </div>
+ <h2>Weekdays List</h2>
+ <ul>
+	<li *ngFor="let day of weekdaysList as index i">{{day}}<button type="button" (click)="onRemove(day)" >Remove</button>
+	<button (click)="onRemoveWithIndex(i)">RemoveWithIndex</button></li>
+ </ul>
+
+ <p *ngIf="testingVs">Visual Studio Works</p>
+
+ <p *ngIf="!testingVs">Visual Studio does not Works</p>
+</div>
+</div>
+
+ <app-model></app-model>
+
+
+ <app-custom mood='sad'></app-custom>

@@ -1,0 +1,22 @@
+<h1>Model Demo</h1>
+
+<div>
+<div>
+  <label>Country Id:</label>
+  <input type="text" id="countryid" #cid/><br><br>
+</div>
+
+<div>
+  <label>Country Name:</label>
+  <input type="text" id="countryname" #cname/><br><br>
+</div>
+
+<div>
+  <label>Code:</label>
+  <input type="text" id="code" #ccode/><br><br>
+</div>
+
+<button (click)="onClick(cid.value,cname.value,ccode.value)">Submit</button>
+
+</div>
+{{display}}
